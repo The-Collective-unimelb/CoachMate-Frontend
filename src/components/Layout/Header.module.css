@@ -1,0 +1,11 @@
+.header {
+    padding: 30px 0;
+    background: #FFB200;
+}
+
+.header h1 {
+    font: "Roboto";
+    font-size: 36;
+    margin-left: 50;
+    font-weight: "bold"
+}
