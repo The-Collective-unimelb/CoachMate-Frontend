@@ -12,6 +12,7 @@ function App() {
         <Route path="/" element={<Welcome/>}/>
         <Route path="/about-us"  element={<NoPage/>}/>
         <Route path="/contact"  element={<NoPage/>}/>
+        <Route path="/login"  element={<NoPage/>}/>
       </Routes>
       <Footer/>
     </div>
