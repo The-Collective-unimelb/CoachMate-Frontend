@@ -1,4 +1,3 @@
-import Header from "../Layout/Header";
 import classes from "./Welcome.module.css";
 import Card from "../UI/Card";
 import netball from "./netball.png";
@@ -16,7 +15,11 @@ function Welcome() {
           </div>
         </div>
         <Card>
-          <img className={classes["netball-img"]} src={netball}></img>
+          <img
+            className={classes["netball-img"]}
+            src={netball}
+            alt="Netball icon"
+          ></img>
           <div className={classes["card-title"]}>NETBALL</div>
           <div className={classes["card-quote"]}>
             Lorem ipsum dolor sit amet. Vel placeat autem et debitis numquam 33
