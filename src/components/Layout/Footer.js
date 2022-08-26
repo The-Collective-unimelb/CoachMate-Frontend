@@ -1,4 +1,5 @@
 import classes from "./Footer.module.css"
+import coachmateSquare from "./CoachmateSquare.png";
 
 function Footer() {
     return <div className={classes.footer}>
@@ -16,8 +17,7 @@ function Footer() {
             </div>
         </div>
         <div className={classes.div4}>
-            <a className={classes.h2}>COACH</a>
-            <a className={classes.h2}>MATE</a>
+            <img className={classes["coachmate-square-logo"]} src={coachmateSquare}></img>
         </div>
     </div>
 }

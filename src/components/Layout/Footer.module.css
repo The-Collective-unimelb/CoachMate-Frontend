@@ -6,7 +6,6 @@
     justify-content: space-between;
     background-color: #FFB200;
     width: 90vw;
-    height: 15vh;
     padding-left: 5vw;
     padding-right: 5vw;
     position: relative;
@@ -45,4 +44,9 @@
     font-family: "Roboto";
     font-size: 25px;
     font-weight: 1000;
+}
+
+.coachmate-square-logo{
+    width: 150px;
+    height: 150px;
 }

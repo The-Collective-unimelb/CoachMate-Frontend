@@ -2,13 +2,20 @@
     display: flex;
     background: #FFB200;
     border-bottom: 4px solid;
+    align-items: center;
+}
+
+.coachmate-flat-logo{
+    width: 300px;
+    height: 100px;
+    margin-right:auto;
 }
 
 .header h1 {
     font: "Roboto";
     font-size: 36px;
     font-weight: bold;
-    margin: 20px auto 20px 40px
+    
 }
 
 .header nav {
@@ -31,6 +38,6 @@
 
 .login {
     margin: 20px 40px 20px 40px;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
-  }
+}
