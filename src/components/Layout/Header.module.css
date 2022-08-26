@@ -1,11 +1,36 @@
 .header {
-    padding: 10px 0;
+    display: flex;
     background: #FFB200;
+    border-bottom: 4px solid;
 }
 
 .header h1 {
     font: "Roboto";
     font-size: 36px;
-    margin-left: 50px;
-    font-weight: "bold"
+    font-weight: bold;
+    margin: 20px auto 20px 40px
 }
+
+.header nav {
+    padding: 20px 0 20px 0;
+    border-right: 4px solid;
+}
+
+.flexbox-navbar-text{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.flexbox-navbar-text li {
+    display: inline-block;
+    font-weight: 650;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.login {
+    margin: 20px 40px 20px 40px;
+    font-size: 36px;
+    font-weight: bold;
+  }

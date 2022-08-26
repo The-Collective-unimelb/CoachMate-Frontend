@@ -12,6 +12,7 @@
     position: relative;
     left: 0vw;
     bottom: 0vh;
+    border-top: 4px solid;
 }
 
 .div1{ 
@@ -42,6 +43,6 @@
 }
 .h2{
     font-family: "Roboto";
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 25px;
+    font-weight: 1000;
 }
