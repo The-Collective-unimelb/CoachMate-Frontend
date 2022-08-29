@@ -6,14 +6,14 @@ function Header() {
   return (
     <div className={classes.header}>
       <nav>
-        <ul className={classes["flexbox-navbar-text"]}>
-          <Link to="/">
-            <img
-              className={classes["coachmate-flat-logo"]}
-              src={coachmateFlat}
-              alt="coachmate logo"
-            ></img>
-          </Link>
+        <Link to="/">
+          <img
+            className={classes.logo}
+            src={coachmateFlat}
+            alt="coachmate logo"
+          />
+        </Link>
+        <ul className={classes.link}>
           <li>
             <Link to="/about-us">ABOUT US</Link>
           </li>
