@@ -1,12 +1,12 @@
 .header {
-    display: flex;
+    display: inline-flexbox;
     background: #FFB200;
     border-bottom: 4px solid;
     align-items: center;
     justify-content: space-between;
 }
 
-.coachmate-flat-logo{
+.logo{
     width: 300px;
     height: 100px;
     margin-right:auto;
