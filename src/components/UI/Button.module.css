@@ -1,0 +1,10 @@
+.button {
+    background-color: #FFB200;
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.6);
+    border-radius: 1px;
+    border-style: solid;
+}
+
+.button:hover {
+    background-color: #FFC1B9;
+}
