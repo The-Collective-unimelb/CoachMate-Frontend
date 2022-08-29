@@ -1,48 +1,51 @@
 .header {
-    display: inline-flexbox;
-    background: #FFB200;
-    border-bottom: 4px solid;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  background: #ffb200;
+  border-bottom: 4px solid;
+  align-items: center;
 }
 
-.logo{
-    width: 300px;
-    height: 100px;
-    margin-right:auto;
-    float: left;
+.logo {
+  width: 300px;
+  height: 100px;
+  margin-right: auto;
+  float: left;
 }
 
 .header h1 {
-    font: "Roboto";
-    font-size: 36px;
-    font-weight: bold;
-    
+  font: "Roboto";
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .header nav {
-    padding: 20px 0 20px 0;
-    /* border-right: 4px solid; */
+  padding: 20px 0 20px 0;
+  display: block;
 }
 
-.flexbox-navbar-text{
-    padding: 0px;
-    margin: 10px;
-    text-align: right;
-    display:inline-block;
-    vertical-align:middle;
+.nav-item {
+  display: inline-block;
+  padding: 0px 20px;
 }
 
+.flexbox-navbar-text {
+  padding: 0px;
+  margin: 10px;
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+}
 
 .flexbox-navbar-text li {
-    display: inline-block;
-    font-weight: 650;
-    padding-left: 25px;
-    padding-right: 25px;
+  display: inline-block;
+  font-weight: 650;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .login {
-    margin: 20px 40px 20px 40px;
-    font-size: 30px;
-    font-weight: bold;
+  margin: 20px 40px 20px 40px;
+  font-size: 30px;
+  font-weight: bold;
 }

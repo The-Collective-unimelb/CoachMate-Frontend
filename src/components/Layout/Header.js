@@ -5,28 +5,30 @@ import coachmateFlat from "../../assets/CoachmateFlat.png";
 function Header() {
   return (
     <div className={classes.header}>
+      <Link to="/" className={classes["logo"]}>
+        <img
+          className={classes.logo}
+          src={coachmateFlat}
+          alt="coachmate logo"
+        />
+      </Link>
       <nav>
-        <Link to="/">
-          <img
-            className={classes.logo}
-            src={coachmateFlat}
-            alt="coachmate logo"
-          />
-        </Link>
-        <ul className={classes.link}>
+        <ul className={classes["flexbox-navbar-text"]}>
           <li>
-            <Link to="/about-us">ABOUT US</Link>
+            <Link to="/about-us" className={classes["nav-item"]}>
+              ABOUT US
+            </Link>
           </li>
           <li>
-            <Link to="/contact">CONTACT</Link>
-          </li>
-          <li>
-            <Link to="/login" className={classes["login"]}>
-              LOGIN
+            <Link to="/contact" className={classes["nav-item"]}>
+              CONTACT
             </Link>
           </li>
         </ul>
       </nav>
+      <Link to="/login" className={classes["login"]}>
+        LOGIN
+      </Link>
     </div>
   );
 }

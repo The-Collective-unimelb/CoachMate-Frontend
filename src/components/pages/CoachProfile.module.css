@@ -1,3 +1,49 @@
+.vertical-flex {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.horizontal-flex {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 1000px) {
+  .horizontal-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-pic-column {
+    margin: 0 auto 30px auto;
+  }
+  
+}
+
+.profile-pic-column {
+  padding: 0 30px 0 30px;
+  align-items: center;
+}
+
+.profile-details-column {
+  padding: 0 50px 0 50px;
+}
+
 .coach-name {
-    text-align: center;
+  text-align: center;
+}
+
+.profile-pic {
+  max-width: 200px;
+  align-content: center;
 }
