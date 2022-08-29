@@ -1,5 +1,5 @@
 import classes from "./Footer.module.css"
-import coachmateSquare from "./CoachmateSquare.png";
+import coachmateSquare from "../../assets/CoachmateSquare.png";
 
 function Footer() {
     return <div className={classes.footer}>
