@@ -12,7 +12,7 @@ function CoachProfile() {
           <img src={pfp} className={classes["profile-pic"]}></img>
         </div>
         <div className={classes["profile-details-column"]}>
-          <div>
+          <p>
             <h2>ABOUT ME</h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero
@@ -24,15 +24,15 @@ function CoachProfile() {
             vitae elementum curabitur vitae. Convallis tellus id interdum velit
             laoreet id donec. Nibh mauris cursus mattis molestie a iaculis. Urna
             id volutpat lacus laoreet.
-          </div>
-          <div>
+          </p>
+          <p>
             <h2>SKILLS</h2>
             Convallis tellus id interdum velit laoreet id donec. Nibh mauris
             cursus mattis molestie a iaculis. Urna id volutpat lacus laoreet.
             Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur
             vitae.
-          </div>
-          <div>
+          </p>
+          <p>
             <h2>QUALIFICATIONS</h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero
@@ -42,8 +42,8 @@ function CoachProfile() {
             donec. Nibh mauris cursus mattis molestie a iaculis. Urna id
             volutpat lacus laoreet. Sagittis aliquam malesuada bibendum arcu
             vitae elementum curabitur vitae.
-          </div>
-          <div>
+          </p>
+          <p>
             <h2>SESSION PRICES</h2>
             <div>One-on-One Coaching 30 MINS $175</div>
             <div>One-on-One Coaching 45 MINS $250</div>
@@ -51,8 +51,8 @@ function CoachProfile() {
             <div>Team up to 15 athletes 60 MINS $500</div>
             <div>Online Mentoring 30 MINS $100</div>
             <div>Online Mentoring 45 MINS $140</div>
-          </div>
-          <div>
+          </p>
+          <p>
             <h2>REVIEWES</h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero
@@ -62,8 +62,8 @@ function CoachProfile() {
             donec. Nibh mauris cursus mattis molestie a iaculis. Urna id
             volutpat lacus laoreet. Sagittis aliquam malesuada bibendum arcu
             vitae elementum curabitur vitae.
-          </div>
-          <div>
+          </p>
+          <p>
             <h2>CONTACT INFO</h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero
@@ -73,7 +73,7 @@ function CoachProfile() {
             donec. Nibh mauris cursus mattis molestie a iaculis. Urna id
             volutpat lacus laoreet. Sagittis aliquam malesuada bibendum arcu
             vitae elementum curabitur vitae.
-          </div>
+          </p>
         </div>
       </div>
     </div>
