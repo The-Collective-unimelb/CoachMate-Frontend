@@ -1,6 +1,6 @@
 import classes from "./Welcome.module.css";
 import Card from "../UI/Card";
-import netball from "./netball.png";
+import netball from "../../assets/netball.png";
 
 function Welcome() {
   return (
