@@ -6,6 +6,7 @@ import Header from "./components/Layout/Header";
 import CoachesList from "./components/pages/CoachesList";
 import CoachProfile from "./components/pages/CoachProfile";
 import EditProfile from "./components/pages/EditProfile";
+import LoginForm from "./components/pages/Login";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         {/* FOR PAGE MAKING PURPOSES */}
         <Route path="/about-us"  element={<CoachProfile/>}/>
         <Route path="/contact"  element={<EditProfile/>}/>
-        <Route path="/login"  element={<NoPage/>}/>
+        <Route path="/login"  element={<LoginForm/>}/>
         <Route path="/coaches"  element={<CoachesList/>}/>
       </Routes>
       <Footer/>
