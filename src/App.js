@@ -7,6 +7,7 @@ import CoachesList from "./components/pages/CoachesList";
 import CoachProfile from "./components/pages/CoachProfile";
 import EditProfile from "./components/pages/EditProfile";
 import LoginForm from "./components/pages/Login";
+import SignUpForm from "./components/pages/SignUp";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact"  element={<EditProfile/>}/>
         <Route path="/login"  element={<LoginForm/>}/>
         <Route path="/coaches"  element={<CoachesList/>}/>
+        <Route path="/signup" element={<SignUpForm/>}/>
       </Routes>
       <Footer/>
     </div>
