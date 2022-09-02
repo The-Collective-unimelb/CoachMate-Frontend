@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./Login.module.css";
 
 class LoginForm extends React.Component {
@@ -36,6 +37,11 @@ class LoginForm extends React.Component {
                 <br/>
                 <div className={classes.form}>
                 <div className={classes.radioDiv}>
+                    <p>blahblha
+
+                    </p>
+                    <br/>
+                    </div>
                     <input
                         name="role"
                         id={classes["athlete"]}
@@ -46,7 +52,7 @@ class LoginForm extends React.Component {
                         defaultChecked/>
                     <label for={classes["athlete"]} id={classes["athlete"]} className={classes.athleteLabel}>
                         
-                        Athlete
+                        ATHLETE
                     </label>
                     <input
                         name="role"
@@ -57,12 +63,11 @@ class LoginForm extends React.Component {
                         onChange = {this.handleChange} />
                     <label for={classes["coach"]} id={classes["coach"]} className={classes.coachLabel}>
                         
-                        Coach
+                        COACH
                     </label>
-                </div>
-                <h3>LOGIN</h3>
                     
-                <div>
+                <div className={classes.loginDetails}>
+                <h3>LOGIN</h3>
                     <input
                         className={classes.entries}
                         placeholder="EMAIL"
@@ -84,7 +89,8 @@ class LoginForm extends React.Component {
                             name="rememberMe"
                             type="checkbox"
                             checked={this.state.rememberMe}
-                            onChange={this.handleChange} />
+                            onChange={this.handleChange} 
+                            style={{width: "20px"}}/>
                         REMEMBER ME
                     </label>
                 </div>
@@ -92,7 +98,7 @@ class LoginForm extends React.Component {
                 <input type="submit" value="LOGIN" className={classes.submitBtn}/>
                 <div className={classes.createAccount}>
                     <p>DON'T HAVE AN ACCOUNT?
-                    <a href="">CREATE AN ACCOUNT</a>
+                    <Link to="/signup">CREATE AN ACCOUNT</Link>
                     </p>
                 </div>
                 </div>
