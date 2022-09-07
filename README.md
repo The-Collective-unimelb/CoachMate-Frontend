@@ -2,10 +2,16 @@
 ## Dependencies
 
 React
-```npm install react```
+```
+npm install react
+```
 
 React Router
-```npm install react-router-dom```
+```
+npm install react-router-dom
+```
 
 Material UI
-```npm install @mui/material @emotion/react @emotion/styled```
+```
+npm install @mui/material @emotion/react @emotion/styled
+```
