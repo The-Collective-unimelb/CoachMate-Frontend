@@ -67,7 +67,6 @@ class LoginForm extends React.Component {
                     </label>
                     
                 <div className={classes.loginDetails}>
-                <h3>LOGIN</h3>
                     <input
                         className={classes.entries}
                         placeholder="EMAIL"
@@ -95,7 +94,12 @@ class LoginForm extends React.Component {
                     </label>
                 </div>
                 <br/>
-                <input type="submit" value="LOGIN" className={classes.submitBtn}/>
+
+                {/* <input type="submit" value="LOGIN" className={classes.submitBtn}/> */}
+
+                {/* Link to dashboard temporarily */}
+                <Link to="/coach-dashboard" className={classes.submitBtn}>LOGIN</Link>
+
                 <div className={classes.createAccount}>
                     <p>DON'T HAVE AN ACCOUNT?
                     <Link to="/signup">CREATE AN ACCOUNT</Link>

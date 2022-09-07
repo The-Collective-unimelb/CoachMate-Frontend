@@ -82,6 +82,9 @@
     font-weight: bold;
     font-size: 20px;
     width: 10vw;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
   }
 
   .loginDetails{
