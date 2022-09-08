@@ -9,17 +9,21 @@
 }
 
 .dashboard-grid-container {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px auto 50px auto;
+  max-width: 75vw;
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 1.5fr 3fr;
 }
 
-.profile {
-  text-align: center;
+.profile-column {
   grid-column-start: 1;
   grid-row-start: 1;
   grid-row-end: 3;
+}
+
+.profile-box {
+  max-width: fit-content;
+  margin-left: 20%;
 }
 
 img {
@@ -30,6 +34,7 @@ img {
 .profile-username {
   color: #343434;
   margin-bottom: 0%;
+  text-align: center;
 }
 
 .dashboard-buttons-grid-container {

@@ -7,9 +7,11 @@ function CoachDashboard() {
     <div className={classes["vertical-flex"]}>
       <h1 className={classes["heading"]}>DASHBOARD</h1>
       <div className={classes["dashboard-grid-container"]}>
-        <div className={classes["profile"]}>
-          <img src={pfp} className={classes["profile-pic"]}></img>
-          <h2 className={classes["profile-username"]}>Username</h2>
+        <div className={classes["profile-column"]}>
+          <div className={classes["profile-box"]}>
+            <img src={pfp} className={classes["profile-pic"]}></img>
+            <h2 className={classes["profile-username"]}>Username</h2>
+          </div>
         </div>
         <div className={classes["dashboard-buttons-grid-container"]}>
           <Link to="/coach-profile" className={classes.link}>
