@@ -1,12 +1,28 @@
 import { Link } from "react-router-dom";
 import classes from "./CoachDashboard.module.css";
+import pfp from "../../assets/pfp-blue.jpg";
 
 function CoachDashboard() {
   return (
     <div className={classes["vertical-flex"]}>
-      <Link to="/coach-profile" className={classes.link}>COACH PROFILE</Link>
-      <br></br>
-      <Link to="/edit-profile" className={classes.link}>EDIT PROFILE</Link>
+      <h1 className={classes["heading"]}>DASHBOARD</h1>
+      <div className={classes["dashboard-grid-container"]}>
+        <div className={classes["profile"]}>
+          <img src={pfp} className={classes["profile-pic"]}></img>
+          <h2 className={classes["profile-username"]}>Username</h2>
+        </div>
+        <div className={classes["dashboard-buttons-grid-container"]}>
+          <Link to="/coach-profile" className={classes.link}>
+            COACH PROFILE
+          </Link>
+          <Link to="/edit-profile" className={classes.link}>
+            EDIT PROFILE
+          </Link>
+          <Link to="/coaches" className={classes.link}>
+            COACHLIST
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
