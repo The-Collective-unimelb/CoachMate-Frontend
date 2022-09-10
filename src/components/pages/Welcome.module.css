@@ -4,7 +4,20 @@
   flex-direction: column;
 }
 
-.horizontal-flex {
+.search-title {
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.horizontal-search-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.horizontal-content-flex {
   padding: 30px;
   display: flex;
   flex-direction: row;
@@ -29,12 +42,16 @@
 .card-title {
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
 }
 
 .card-quote {
   font-size: 15px;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-button {
+  margin: 30px;
 }
 
 .netball-img {
@@ -42,6 +59,3 @@
   width: 200px;
   height: 200px;
 }
-
-
-
