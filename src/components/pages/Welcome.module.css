@@ -18,7 +18,7 @@
 }
 
 .horizontal-content-flex {
-  padding: 30px;
+  margin: 70px 30px 70px 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
