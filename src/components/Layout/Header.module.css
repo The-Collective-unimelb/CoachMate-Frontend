@@ -7,6 +7,7 @@
 }
 
 .logo {
+  font-family: "Roboto";
   width: 300px;
   height: 100px;
   margin-right: auto;
@@ -26,9 +27,10 @@
 
 .nav-item {
   display: inline-block;
+  font-family: "Roboto";
   padding: 0px 20px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .flexbox-navbar-text {
