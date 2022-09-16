@@ -1,46 +1,42 @@
-import React from "react";
+import React, {useState} from "react";
+import { CheckBox } from "@mui/icons-material";
+import { TextField, Button, FormControlLabel } from "@mui/material";
 import { Link } from "react-router-dom";
 import classes from "./Login.module.css";
 
-class LoginForm extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            role : 'Athlete',
-            email : '',
-            password : '',
-            rememberMe : false
-        };
-        
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+function LoginForm(props) {
+    const [state, setState] = useState({
+        role : 'Athlete',
+        email : '',
+        password : ''
+    })
+
+    
+  /*const [checked, setChecked] = useState({
+    rememberMe : false
+  })*/
+    
+/*const handleChecked =() => {
+
+    setChecked(!checked);
+}*/
+
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setState(prevState => ({
+            ...prevState,
+            [name] : value
+        }));
     }
 
-    handleChange(event){
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-
-        const name = target.name;
-
-        this.setState({
-            [name]: value
-        });
-    }
-
-    handleSubmit(){
-        alert('Login submitted: Role:' + this.state.role + 'Email:' + this.state.email + 'Password:' +this.state.password + 'Remember:' + this.state.rememberMe);
-    }
-
-    render() {
+    
         return (
-            <form onSubmit={this.handleSubmit} className={classes.loginForm}>
+            <div className={classes.loginForm}>
                 <br/>
                 <div className={classes.form}>
                 <div className={classes.radioDiv}>
-                    <p>blahblha
-
-                    </p>
-                    <br/>
+                    
+                    
                     </div>
                     <input
                         name="role"
@@ -48,7 +44,7 @@ class LoginForm extends React.Component {
                         className={classes.athleteRadio}
                         type ="radio"
                         value ="Athlete"
-                        onChange = {this.handleChange}
+                        onChange = {handleChange}
                         defaultChecked/>
                     <label for={classes["athlete"]} id={classes["athlete"]} className={classes.athleteLabel}>
                         
@@ -60,38 +56,36 @@ class LoginForm extends React.Component {
                         className={classes.coachRadio}
                         type ="radio"
                         value ="Coach"
-                        onChange = {this.handleChange} />
+                        onChange = {handleChange} />
                     <label for={classes["coach"]} id={classes["coach"]} className={classes.coachLabel}>
                         
                         COACH
                     </label>
                     
                 <div className={classes.loginDetails}>
-                    <input
+                    <TextField
                         className={classes.entries}
                         placeholder="EMAIL"
                         name="email"
                         type="email"
-                        value = {this.state.email}
-                        onChange = {this.handleChange} />
+                        value = {state.email}
+                        onChange = {handleChange} />
                     <br/>
-                    <input
+                    <TextField
                         className={classes.entries}
                         placeholder="PASSWORD"
                         name="password"
                         type="password"
-                        value={this.state.password}
-                        onChange = {this.handleChange} />
+                        value={state.password}
+                        onChange = {handleChange} />
                     <br/>
-                    <label>
-                        <input
-                            name="rememberMe"
-                            type="checkbox"
-                            checked={this.state.rememberMe}
-                            onChange={this.handleChange} 
-                            style={{width: "20px"}}/>
-                        REMEMBER ME
-                    </label>
+                    {/*<FormControlLabel control={
+                        <CheckBox
+                            checked={checked}
+                            onChange={handleChecked} 
+                          />}
+                        label="REMEMBER ME"
+                    />*/}
                 </div>
                 <br/>
 
@@ -106,9 +100,9 @@ class LoginForm extends React.Component {
                     </p>
                 </div>
                 </div>
-            </form>
+            </div>
         )
-    }
-}
+    
+        }
 
 export default LoginForm;
