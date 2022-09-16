@@ -15,14 +15,15 @@ function App() {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<Welcome />} />
-        {/* FOR PAGE MAKING PURPOSES */}
-        <Route path="/coach-profile" element={<CoachProfile />} />
-        <Route path="/edit-profile" element={<EditProfile />} />
-        <Route path="/coach-dashboard" element={<CoachDashboard />} />
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/coaches" element={<CoachesList />} />
-        <Route path="/signup" element={<SignUpForm />} />
+          <Route path="/" element={<Welcome />} />
+          {/* FOR PAGE MAKING PURPOSES */}
+          <Route path="/coach-profile" element={<CoachProfile />} />
+          <Route path="/edit-profile" element={<EditProfile />} />
+          <Route path="/coach-dashboard" element={<CoachDashboard />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/coaches" element={<CoachesList />} />
+          <Route path="/signup" element={<SignUpForm />} />
+          <Route path="/*" element={<NoPage />} />
       </Routes>
       <Footer />
     </div>
