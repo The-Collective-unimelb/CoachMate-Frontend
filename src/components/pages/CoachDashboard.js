@@ -9,7 +9,11 @@ function CoachDashboard() {
       <div className={classes["dashboard-grid-container"]}>
         <div className={classes["profile-column"]}>
           <div className={classes["profile-box"]}>
-            <img src={pfp} className={classes["profile-pic"]}></img>
+            <img
+              src={pfp}
+              className={classes["profile-pic"]}
+              alt="profile pic"
+            ></img>
             <h2 className={classes["profile-username"]}>Username</h2>
           </div>
         </div>

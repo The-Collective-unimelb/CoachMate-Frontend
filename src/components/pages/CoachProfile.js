@@ -1,6 +1,5 @@
 import classes from "./CoachProfile.module.css";
 import pfp from "../../assets/pfp-blue.jpg";
-import Card from "../UI/Card";
 
 function CoachProfile() {
   return (
@@ -9,7 +8,11 @@ function CoachProfile() {
       <div className={classes["horizontal-flex"]}>
         <div className={classes["profile-pic-column"]}>
           <h2 className={classes["coach-name"]}>NAME</h2>
-          <img src={pfp} className={classes["profile-pic"]}></img>
+          <img
+            src={pfp}
+            className={classes["profile-pic"]}
+            alt="profile pic"
+          ></img>
         </div>
         <div className={classes["profile-details-column"]}>
           <p>
