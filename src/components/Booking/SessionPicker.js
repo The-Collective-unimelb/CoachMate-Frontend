@@ -25,6 +25,7 @@ function SessionPicker(props) {
         minTime={dayjs().hour(8)}
         maxTime={dayjs().hour(18)}
         views={["year", "day", "hours"]}
+        disableMaskedInput
       />
     </LocalizationProvider>
   );
