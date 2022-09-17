@@ -14,19 +14,21 @@ import CoachSchedule from "./components/pages/CoachSchedule";
 function App() {
   return (
     <div>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Welcome />} />
-        {/* FOR PAGE MAKING PURPOSES */}
-        <Route path="/coach-profile" element={<CoachProfile />} />
-        <Route path="/edit-profile" element={<EditProfile />} />
-        <Route path="/coach-dashboard" element={<CoachDashboard />} />
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/coaches" element={<CoachesList />} />
-        <Route path="/signup" element={<SignUpForm />} />
-        <Route path="/schedule" element={<CoachSchedule />} />
-        <Route path="/*" element={<NoPage />} />
-      </Routes>
+      {/** header and content: viewport height minus footer height */}
+      <div style={{ "min-height": "calc(100vh - 150px)" }}>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Welcome />} />
+          <Route path="/coach-profile" element={<CoachProfile />} />
+          <Route path="/edit-profile" element={<EditProfile />} />
+          <Route path="/coach-dashboard" element={<CoachDashboard />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/coaches" element={<CoachesList />} />
+          <Route path="/signup" element={<SignUpForm />} />
+          <Route path="/schedule" element={<CoachSchedule />} />
+          <Route path="/*" element={<NoPage />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );
