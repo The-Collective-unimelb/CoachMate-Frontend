@@ -5,6 +5,9 @@ import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import dayjs from "dayjs";
 
 function SessionPicker(props) {
+  const localizedFormat = require("dayjs/plugin/localizedFormat");
+  dayjs.extend(localizedFormat);
+
   function handleSelectDate(newDate) {
     props.onSelectDate(newDate);
   }
@@ -16,8 +19,12 @@ function SessionPicker(props) {
         label="Pick a time"
         value={props.dateTime}
         onChange={handleSelectDate}
-        minDateTime={dayjs()}
-        views={['year', 'day', 'hours']}
+        inputFormat="LLL"
+        minDate={dayjs()}
+        maxDate={dayjs().add(5, "month")}
+        minTime={dayjs().hour(8)}
+        maxTime={dayjs().hour(18)}
+        views={["year", "day", "hours"]}
       />
     </LocalizationProvider>
   );
