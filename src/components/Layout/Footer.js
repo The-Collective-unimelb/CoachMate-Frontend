@@ -10,9 +10,12 @@ function Footer() {
         </div>
         <div className={classes.div2}>
             <div className={classes.div3}>
-                <a className={classes.h1}>&copy; 2022 COACHMATE |&nbsp;</a>
-                <a href='/' className={classes.h1}>TERMS &amp; CONDITIONS |&nbsp;</a>
-                <a href='/' className={classes.h1}>PRIVACY POLICY |&nbsp;</a>
+                <a className={classes.h1}>&copy; 2022 COACHMATE</a>
+                <div className={classes.h1}>&nbsp; | &nbsp;</div>
+                <a href='/' className={classes.h1}>TERMS &amp; CONDITIONS</a>
+                <div className={classes.h1}>&nbsp; | &nbsp;</div>
+                <a href='/' className={classes.h1}>PRIVACY POLICY</a>
+                <div className={classes.h1}>&nbsp; | &nbsp;</div>
                 <a href='/' className={classes.h1}>COOKIE POLICY</a>
             </div>
         </div>

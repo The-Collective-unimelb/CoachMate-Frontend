@@ -20,29 +20,21 @@
   font-weight: bold;
 }
 
-.header nav {
-  padding: 20px 0 20px 0;
-  display: block;
-}
-
 .nav-item {
   display: inline-block;
   font-family: "Roboto";
-  padding: 0px 20px;
   font-weight: 700;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .flexbox-navbar-text {
-  padding: 0px;
-  margin: 10px;
-  text-align: right;
-  display: inline-block;
-  vertical-align: middle;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .flexbox-navbar-text li {
   display: inline-block;
-  font-weight: 650;
   padding-left: 25px;
   padding-right: 25px;
 }
