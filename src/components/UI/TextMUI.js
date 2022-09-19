@@ -8,6 +8,7 @@ function TextMUI(props) {
       label={props.label}
       sx={props.sx}
       className={classes["textfield"]}
+      onInput={props.onInput}
     />
   );
 }
