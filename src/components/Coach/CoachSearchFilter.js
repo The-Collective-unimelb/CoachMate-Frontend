@@ -51,11 +51,23 @@ function CoachSearchFilter(props) {
         />
         <FormGroup className={classes["labels"]}>
           <FormControlLabel
-            control={<Checkbox defaultChecked />}
+            control={
+              <Checkbox
+                defaultChecked
+                id="private"
+                onChange={props.onCheckboxChange}
+              />
+            }
             label="Private Session"
           />
           <FormControlLabel
-            control={<Checkbox defaultChecked />}
+            control={
+              <Checkbox
+                defaultChecked
+                id="group"
+                onChange={props.onCheckboxChange}
+              />
+            }
             label="Group Sessions"
           />
         </FormGroup>
