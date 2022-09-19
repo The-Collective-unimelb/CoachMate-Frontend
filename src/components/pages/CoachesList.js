@@ -14,7 +14,7 @@ const DUMMY_VARS = [
 const initialFilterFormData = {
   name: "",
   location: "",
-  priceRange: [20, 30],
+  priceRange: [20, 100],
   sessionType: {
     private: true,
     group: true,
@@ -74,6 +74,27 @@ function CoachesList() {
     }
   }
 
+  function handleCheckbox(event) {
+    if (event.target.id === "private") {
+      setFilterFormData({
+        ...filterFormData,
+        sessionType: {
+          ...filterFormData.sessionType,
+          private: !filterFormData.sessionType.private,
+        },
+      });
+    }
+    if (event.target.id === "group") {
+      setFilterFormData({
+        ...filterFormData,
+        sessionType: {
+          ...filterFormData.sessionType,
+          group: !filterFormData.sessionType.group,
+        },
+      });
+    }
+  }
+
   function handleOpenFilter() {
     setOpenFilter(!openFilter);
   }
@@ -84,6 +105,9 @@ function CoachesList() {
     console.log(filterFormData);
 
     setOpenFilter(false);
+
+    setSearchVal("");
+    setFilterFormData(initialFilterFormData);
   }
 
   return (
@@ -103,6 +127,7 @@ function CoachesList() {
           maxSliderVal={maxPrice}
           onSubmit={handleFormSubmit}
           onInput={handleSearchVal}
+          onCheckboxChange={handleCheckbox}
         />
       )}
       <section className={classes["coach-cards"]}>
