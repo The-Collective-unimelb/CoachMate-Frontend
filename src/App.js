@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       {/** header and content: viewport height minus footer height */}
-      <div style={{ "min-height": "calc(100vh - 150px)" }}>
+      <div style={{ minHeight: "calc(100vh - 150px)" }}>
         <Header />
         <Routes>
           <Route path="/" element={<Welcome />} />
