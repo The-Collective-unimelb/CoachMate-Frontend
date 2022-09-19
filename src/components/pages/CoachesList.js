@@ -11,9 +11,20 @@ const DUMMY_VARS = [
   { id: 4, name: "Jamie", avail: "12/12/22", location: "mel" },
 ];
 
+const initialFilterFormData = {
+  name: "",
+  location: "",
+  priceRange: [20, 100],
+  sessionType: {
+    private: true,
+    group: true,
+  },
+};
+
 function CoachesList() {
   const [openFilter, setOpenFilter] = useState(false);
-  const [priceVal, setPriceVal] = useState([20, 30]);
+  const [searchVal, setSearchVal] = useState("");
+  const [filterFormData, setFilterFormData] = useState(initialFilterFormData);
 
   const minDistance = 10;
   const maxPrice = 100;
@@ -25,25 +36,98 @@ function CoachesList() {
     if (newValue[1] - newValue[0] < minDistance) {
       if (activeThumb === 0) {
         const clamped = Math.min(newValue[0], maxPrice - minDistance);
-        setPriceVal([clamped, clamped + minDistance]);
+        setFilterFormData({
+          ...filterFormData,
+          priceRange: [clamped, clamped + minDistance],
+        });
       } else {
         const clamped = Math.max(newValue[1], minDistance);
-        setPriceVal([clamped - minDistance, clamped]);
+        setFilterFormData({
+          ...filterFormData,
+          priceRange: [clamped - minDistance, clamped],
+        });
       }
     } else {
-      setPriceVal(newValue);
+      setFilterFormData({
+        ...filterFormData,
+        priceRange: newValue,
+      });
     }
+  }
+
+  function handleSearchVal(event) {
+    if (openFilter) {
+      if (event.target.id === "name") {
+        setFilterFormData({
+          ...filterFormData,
+          name: event.target.value.trim(),
+        });
+      }
+      if (event.target.id === "location") {
+        setFilterFormData({
+          ...filterFormData,
+          location: event.target.value.trim(),
+        });
+      }
+    } else {
+      setSearchVal(event.target.value);
+    }
+  }
+
+  function handleCheckbox(event) {
+    if (event.target.id === "private") {
+      setFilterFormData({
+        ...filterFormData,
+        sessionType: {
+          ...filterFormData.sessionType,
+          private: !filterFormData.sessionType.private,
+        },
+      });
+    }
+    if (event.target.id === "group") {
+      setFilterFormData({
+        ...filterFormData,
+        sessionType: {
+          ...filterFormData.sessionType,
+          group: !filterFormData.sessionType.group,
+        },
+      });
+    }
+  }
+
+  function handleOpenFilter() {
+    setOpenFilter(!openFilter);
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    console.log(searchVal);
+    console.log(filterFormData);
+
+    setOpenFilter(false);
+
+    setSearchVal("");
+    setFilterFormData(initialFilterFormData);
   }
 
   return (
     <div className={classes["coach-list"]}>
-      {!openFilter && <CoachSearch onButtonClick={setOpenFilter} />}
+      {!openFilter && (
+        <CoachSearch
+          onButtonClick={handleOpenFilter}
+          onSubmit={handleFormSubmit}
+          onInput={handleSearchVal}
+        />
+      )}
       {openFilter && (
         <CoachSearchFilter
-          sliderVal={priceVal}
+          sliderVal={filterFormData.priceRange}
           onSliderChange={handlePriceSlider}
-          onButtonClick={setOpenFilter}
+          onButtonClick={handleOpenFilter}
           maxSliderVal={maxPrice}
+          onSubmit={handleFormSubmit}
+          onInput={handleSearchVal}
+          onCheckboxChange={handleCheckbox}
         />
       )}
       <section className={classes["coach-cards"]}>
