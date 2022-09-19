@@ -90,3 +90,17 @@
   .loginDetails{
     top: 40vh;
   }
+
+  .signup {
+    padding-bottom: 3px;
+    color:dodgerblue;
+    font-weight: 600;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  .login:hover::before {
+    transform: scaleX(0);
+  }

@@ -7,11 +7,19 @@
 }
 
 .logo {
-  font-family: "Roboto";
   width: 300px;
   height: 100px;
   margin-right: auto;
   float: left;
+  transition: all .3s ease;
+}
+
+.logo:hover::before {
+  transform: scaleX(0);
+}
+
+.logo:hover {
+  width: 310px;
 }
 
 .header h1 {

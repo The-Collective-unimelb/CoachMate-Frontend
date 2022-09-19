@@ -51,7 +51,7 @@ function CoachSearchFilter(props) {
         </FormGroup>
       </Stack>
       <div className={classes.button}>
-        <Button onClick={props.onButtonClick}>Search</Button>
+        <Button onClick={props.onButtonClick}>SEARCH</Button>
       </div>
     </form>
   );

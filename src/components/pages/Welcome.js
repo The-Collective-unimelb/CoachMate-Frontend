@@ -1,7 +1,8 @@
 import classes from "./Welcome.module.css";
 import Card from "../UI/Card";
 import netball from "../../assets/netball.png";
-import { TextField, Button } from "@mui/material";
+import { TextField } from "@mui/material";
+import Button from "../UI/Button";
 
 function Welcome() {
   return (
@@ -10,7 +11,7 @@ function Welcome() {
       <div className={classes["horizontal-search-flex"]}>
         <TextField id="standard-basic" label="SPORT" variant="standard" />
         <TextField id="standard-basic" label="LOCATION" variant="standard" />
-        <Button variant="contained">FIND COACH</Button>
+        <Button>FIND COACH</Button>
       </div>
       <div className={classes["horizontal-content-flex"]}>
         <div className={classes["welcome-quote"]}>

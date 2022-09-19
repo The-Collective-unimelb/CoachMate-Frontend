@@ -10,6 +10,7 @@ import LoginForm from "./components/pages/Login";
 import SignUpForm from "./components/pages/SignUp";
 import CoachDashboard from "./components/pages/CoachDashboard";
 import CoachSchedule from "./components/pages/CoachSchedule";
+import SessionPicker from "./components/Booking/SessionPicker";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/coaches" element={<CoachesList />} />
           <Route path="/signup" element={<SignUpForm />} />
           <Route path="/schedule" element={<CoachSchedule />} />
+          <Route path="/session-picker" element={<SessionPicker />} />
           <Route path="/*" element={<NoPage />} />
         </Routes>
       </div>

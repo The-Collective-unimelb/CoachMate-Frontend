@@ -8,8 +8,8 @@ function CoachSearch(props) {
     <form className={classes.form}>
       <TextMUI id="search" label="Search" className={classes["textfield"]} />
       <div className={classes.button}>
-        <Button onClick={props.onButtonClick}>Filter</Button>
-        <Button>Search</Button>
+        <Button onClick={props.onButtonClick}>FILTER</Button>
+        <Button>SEARCH</Button>
       </div>
     </form>
   );
