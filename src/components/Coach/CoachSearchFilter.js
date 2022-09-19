@@ -18,14 +18,24 @@ function CoachSearchFilter(props) {
 
   const labelsCss = {
     margin: "5px 0px 5px 24px",
-    "font-size": "16px",
+    fontSize: "16px",
   };
 
   return (
-    <form className={classes.form}>
+    <form className={classes.form} onSubmit={props.onSubmit}>
       <Stack>
-        <TextMUI id="name" label="Name" sx={textFieldCss} />
-        <TextMUI id="location" label="Location" sx={textFieldCss} />
+        <TextMUI
+          id="name"
+          label="Name"
+          sx={textFieldCss}
+          onInput={props.onInput}
+        />
+        <TextMUI
+          id="location"
+          label="Location"
+          sx={textFieldCss}
+          onInput={props.onInput}
+        />
         <Typography id="price-slider" sx={labelsCss}>
           Session price range
         </Typography>
@@ -51,7 +61,7 @@ function CoachSearchFilter(props) {
         </FormGroup>
       </Stack>
       <div className={classes.button}>
-        <Button onClick={props.onButtonClick}>Search</Button>
+        <Button type="submit">Search</Button>
       </div>
     </form>
   );

@@ -3,13 +3,17 @@ import Button from "../UI/Button";
 import TextMUI from "../UI/TextMUI";
 
 function CoachSearch(props) {
-
   return (
-    <form className={classes.form}>
-      <TextMUI id="search" label="Search" className={classes["textfield"]} />
+    <form className={classes.form} onSubmit={props.onSubmit}>
+      <TextMUI
+        id="search"
+        label="Search"
+        className={classes["textfield"]}
+        onInput={props.onInput}
+      />
       <div className={classes.button}>
-        <Button onClick={props.onButtonClick}>Filter</Button>
-        <Button>Search</Button>
+        <Button type="button" onClick={props.onButtonClick}>Filter</Button>
+        <Button type="submit">Search</Button>
       </div>
     </form>
   );
