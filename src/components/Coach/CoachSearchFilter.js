@@ -73,7 +73,7 @@ function CoachSearchFilter(props) {
         </FormGroup>
       </Stack>
       <div className={classes.button}>
-        <Button type="submit">Search</Button>
+        <Button type="submit">SEARCH</Button>
       </div>
     </form>
   );

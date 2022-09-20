@@ -12,8 +12,8 @@ function CoachSearch(props) {
         onInput={props.onInput}
       />
       <div className={classes.button}>
-        <Button type="button" onClick={props.onButtonClick}>Filter</Button>
-        <Button type="submit">Search</Button>
+        <Button type="button" onClick={props.onButtonClick}>FILTER</Button>
+        <Button type="submit">SEARCH</Button>
       </div>
     </form>
   );
