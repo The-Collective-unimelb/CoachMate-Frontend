@@ -8,9 +8,9 @@
 }
 
 .input-column {
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20px;
 }
 
 .coach-name {
@@ -26,7 +26,6 @@
   text-align: center;
   font-weight: 500;
   font-size: medium;
-
 }
 
 .vertical-flex {
@@ -66,19 +65,18 @@
 }
 
 input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 2px solid black;
-    box-sizing: border-box;
-    filter: drop-shadow(4px 5px 1px #D4D4D4);
-    margin-top: 2%;
-    margin-bottom: 5%;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid black;
+  box-sizing: border-box;
+  filter: drop-shadow(4px 5px 1px #d4d4d4);
+  margin-top: 2%;
+  margin-bottom: 5%;
 }
 
 label {
-    font-weight: 700;
-    text-transform: uppercase;
+  font-weight: 700;
+  text-transform: uppercase;
 }
-
