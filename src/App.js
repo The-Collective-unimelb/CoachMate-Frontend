@@ -11,6 +11,7 @@ import SignUpForm from "./components/pages/SignUp";
 import CoachDashboard from "./components/pages/CoachDashboard";
 import CoachSchedule from "./components/pages/CoachSchedule";
 import SessionPicker from "./components/Booking/SessionPicker";
+import AthleteBooking from "./components/Booking/AthleteBooking";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/signup" element={<SignUpForm />} />
           <Route path="/schedule" element={<CoachSchedule />} />
           <Route path="/session-picker" element={<SessionPicker />} />
+          <Route path="/athlete-booking" element={<AthleteBooking />} />
           <Route path="/*" element={<NoPage />} />
         </Routes>
       </div>

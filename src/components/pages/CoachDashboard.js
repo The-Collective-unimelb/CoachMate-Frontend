@@ -27,6 +27,12 @@ function CoachDashboard() {
           <Link to="/coaches" className={classes.link}>
             COACHLIST
           </Link>
+          <Link to="/schedule" className={classes.link}>
+            SCHEDULE
+          </Link>
+          <Link to="/athlete-booking" className={classes.link}>
+            ATHLETE BOOKING
+          </Link>
         </div>
       </div>
     </div>
