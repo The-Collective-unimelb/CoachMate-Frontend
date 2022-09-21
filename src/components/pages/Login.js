@@ -67,6 +67,7 @@ function LoginForm(props) {
           </label>
         </div>
         <h2>LOGIN</h2>
+        
         <div className={classes.loginDetails}>
           <label>EMAIL</label>
           <input

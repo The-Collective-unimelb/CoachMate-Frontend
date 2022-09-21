@@ -59,7 +59,7 @@
   border-right: 0;
   border-bottom: 3px solid black;
   filter: none;
-  max-width: 600px;
+  width: 30vw;
 }
 
 .form {
@@ -84,6 +84,8 @@
 }
 
 .loginDetails {
+  display: flex;
+  flex-direction: column;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 20px;

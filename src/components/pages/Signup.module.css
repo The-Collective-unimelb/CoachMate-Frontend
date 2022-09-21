@@ -1,89 +1,104 @@
-.loginForm{
-    display: flex;
-    flex-direction: column;
-    height: 135vh;
-    align-items: center;
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  align-items: center;
 }
 
-.radioDiv{
-    height: 50vh;
-    visibility: hidden;
+.radioDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
 }
 
 #athlete,
 #coach {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    display: flex;
-    width: 100px;
-    height: 50px;
-    border: 2px solid black;
-    padding: 0;
-    cursor: pointer;
-  }
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100px;
+  height: 50px;
+  border: 3px solid black;
+  padding: 0;
+  cursor: pointer;
+}
 
-  .athleteRadio {
-    visibility: hidden;
-  }
+#coach {
+  border-left: 0;
+}
 
-  .coachRadio {
-    visibility: hidden;
-  }
+.athleteRadio {
+  visibility: hidden;
+  position: absolute;
+}
 
-  .athleteLabel:hover,
-  .coachLabel:hover {
-    background: #ddd;
-  }
+.coachRadio {
+  position: absolute;
+  visibility: hidden;
+}
 
-  .athleteRadio:checked + label {
-    background: #ffc1b2;
-  }
+.athleteLabel:hover,
+.coachLabel:hover {
+  background: #ddd;
+}
 
-  .coachRadio:checked + label {
-    background: #ffc1b2;
-  }
+.athleteRadio:checked + label {
+  background: #ffc1b2;
+}
 
-  #athlete{
-    top:25vh;
-    right: 50vw;
-    padding-right: 0px;
-    margin-right: 0%;
-  }
+.coachRadio:checked + label {
+  background: #ffc1b2;
+}
 
-  #coach{
-    top: 25vh;
-    left: 50vw;
-    padding-left: 0px;
-    margin-left: 0%;
-  }
+#athlete {
+  top: 25vh;
+  right: 50vw;
+  padding-right: 0px;
+  margin-right: 0%;
+}
 
-  .entries{
-    border-width: 0px;
-    border-bottom-width:1px ;
-    height: 10vh;
-    width: 20vw;
-  }
+#coach {
+  top: 25vh;
+  left: 50vw;
+  padding-left: 0px;
+  margin-left: 0%;
+}
 
-  .form{
-    border: 2px solid black;
-    height: 120vh;
-    width: 90vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.entries {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 3px solid black;
+  filter: none;
+  width: 40vw;
+}
 
-  .submitBtn{
-    border: solid 3px black;
-    border-radius: 0px;
-    background: #ffb200;
-    font-weight: bold;
-    font-size: 20px;
-    width: 10vw;
-  }
+.form {
+  border: 3px solid black;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 60px;
+}
 
-  .loginDetails{
-    top: 40vh;
-  }
+.submitBtn {
+  border: solid 3px black;
+  border-radius: 0px;
+  background: #ffb200;
+  font-weight: bold;
+  font-size: 20px;
+  width: 10vw;
+}
+
+.loginDetails {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20px;
+}
