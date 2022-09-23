@@ -1,6 +1,7 @@
 import CoachCard from "../UI/CoachCard";
 import classes from "./CoachesList.module.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CoachSearch from "../Coach/CoachSearch";
 import CoachSearchFilter from "../Coach/CoachSearchFilter";
 
@@ -22,6 +23,7 @@ const initialFilterFormData = {
 };
 
 function CoachesList() {
+  const navigate = useNavigate();
   const [openFilter, setOpenFilter] = useState(false);
   const [searchVal, setSearchVal] = useState("");
   const [filterFormData, setFilterFormData] = useState(initialFilterFormData);
@@ -138,6 +140,9 @@ function CoachesList() {
               name={coach.name}
               avail={coach.avail}
               location={coach.location}
+              onClick={() => {
+                navigate("/schedule", { state: { key: coach.id } });
+              }}
             />
           );
         })}
