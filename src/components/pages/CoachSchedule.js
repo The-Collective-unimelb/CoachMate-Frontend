@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import classes from "./CoachSchedule.module.css";
 import SessionPicker from "../Booking/SessionPicker";
 import Button from "../UI/Button";
 import SessionType from "../Booking/SessionType";
 import { Stack } from "@mui/system";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
+import NoPage from "./NoPage"
 
 const sessionTypes = [
   { type: "1 on 1", duration: "30mins", price: "$40" },
@@ -16,8 +17,13 @@ const sessionTypes = [
 
 function CoachSchedule(props) {
   const navigate = useNavigate();
+  const location = useLocation();
   const [selectedDate, setSelectedDate] = useState(null);
   const [sessionType, setSessionType] = useState("Private");
+
+  if (location.state === null) {
+    return <NoPage/>;
+  }
 
   function handleSelectDate(newDate) {
     setSelectedDate(newDate);
@@ -30,23 +36,24 @@ function CoachSchedule(props) {
 
   function handleConfirmBooking() {
     Swal.fire({
-      title: 'Success!',
-      text: 'Your booking is successful!',
-      icon: 'success',
+      title: "Success!",
+      text: "Your booking is successful!",
+      icon: "success",
       showCancelButton: true,
-      confirmButtonText: 'Back to home page',
-      cancelButtonText: 'Close'
+      confirmButtonText: "Back to home page",
+      cancelButtonText: "Close",
     }).then((result) => {
       if (result.isConfirmed) {
-        navigate('/');
+        navigate("/");
       }
-    })  }
+    });
+  }
 
   return (
     <div className={classes.layout}>
       <Stack alignItems="center" justifyContent="center">
         <Button onClick={() => navigate(-1)}>Back</Button>
-        <h2>Please select session type, date, and time below</h2>
+        <h2>{location.state.key}</h2>
         <div>
           <SessionPicker
             dateTime={selectedDate}
