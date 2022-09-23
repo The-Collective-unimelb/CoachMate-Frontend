@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import classes from "./CoachSchedule.module.css";
 import SessionPicker from "../Booking/SessionPicker";
 import Button from "../UI/Button";
 import SessionType from "../Booking/SessionType";
 import { Stack } from "@mui/system";
+import Swal from 'sweetalert2';
 
 const sessionTypes = [
   { type: "1 on 1", duration: "30mins", price: "$40" },
@@ -13,6 +15,7 @@ const sessionTypes = [
 ];
 
 function CoachSchedule(props) {
+  const navigate = useNavigate();
   const [selectedDate, setSelectedDate] = useState(null);
   const [sessionType, setSessionType] = useState("Private");
 
@@ -25,12 +28,26 @@ function CoachSchedule(props) {
     console.log(value);
   }
 
+  function handleConfirmBooking() {
+    Swal.fire({
+      title: 'Success!',
+      text: 'Your booking is successful!',
+      icon: 'success',
+      showCancelButton: true,
+      confirmButtonText: 'Back to home page',
+      cancelButtonText: 'Close'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        navigate('/');
+      }
+    })  }
+
   return (
     <div className={classes.layout}>
-      <Stack>
-        <Button>Back</Button>
+      <Stack alignItems="center" justifyContent="center">
+        <Button onClick={() => navigate(-1)}>Back</Button>
+        <h2>Please select session type, date, and time below</h2>
         <div>
-          <h2>Please select session type, date, and time below</h2>
           <SessionPicker
             dateTime={selectedDate}
             onSelectDate={handleSelectDate}
@@ -41,7 +58,7 @@ function CoachSchedule(props) {
             onSelectType={handleSelectType}
           />
         </div>
-        <Button>Confirm Booking</Button>
+        <Button onClick={handleConfirmBooking}>Confirm Booking</Button>
       </Stack>
     </div>
   );
