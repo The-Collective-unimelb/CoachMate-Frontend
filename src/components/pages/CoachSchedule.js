@@ -8,6 +8,9 @@ import { Stack } from "@mui/system";
 import Swal from "sweetalert2";
 import NoPage from "./NoPage";
 
+import BookingTick from "../../assets/BookingTick.png";
+import testPic from "../../assets/profile pic.png";
+
 const sessionTypes = [
   { type: "1 on 1", duration: "30mins", price: "$40" },
   { type: "1 on 1", duration: "60mins", price: "$80" },
@@ -24,11 +27,7 @@ function CoachSchedule(props) {
   if (location.state === null) {
     return (
       <>
-        <NoPage
-          text="Please select a coach from "
-          linkText="here"
-          to="/coaches"
-        />
+        <NoPage text="Please select a coach " linkText="here" to="/coaches" />
       </>
     );
   }
@@ -43,10 +42,16 @@ function CoachSchedule(props) {
   }
 
   function handleConfirmBooking() {
+    // navigate("/booking-success");
+
     Swal.fire({
       title: "Success!",
       text: "Your booking is successful!",
       icon: "success",
+      // iconHtml: <img src="../../assets/BookingTick.png" alt="booking success" />,
+      // imageUrl: "/assets/BookingTick.png",
+      // imageHeight: "200px",
+      // imageWidth: "200px",
       showCancelButton: true,
       confirmButtonText: "Back to home page",
       cancelButtonText: "Close",
@@ -59,19 +64,24 @@ function CoachSchedule(props) {
 
   return (
     <div className={classes.layout}>
-      <Stack alignItems="center" justifyContent="center">
-        <Button onClick={() => navigate(-1)}>Back</Button>
-        <h2>{location.state.coach.name}</h2>
-        <SessionPicker
-          dateTime={selectedDate}
-          onSelectDate={handleSelectDate}
-        />
-        <h3>Select session type</h3>
-        <SessionType
-          sessionType={sessionType}
-          onSelectType={handleSelectType}
-        />
-        <Button onClick={handleConfirmBooking}>Confirm Booking</Button>
+      <Stack direction="row" spacing={10}>
+        <Stack spacing={5}>
+          <Button onClick={() => navigate(-1)}>Back</Button>
+
+          <img src={testPic} alt="profile pic" />
+          <h2>{location.state.coach.name}</h2>
+        </Stack>
+        <Stack alignItems="center" justifyContent="center" spacing={5}>
+          <SessionPicker
+            dateTime={selectedDate}
+            onSelectDate={handleSelectDate}
+          />
+          <SessionType
+            sessionType={sessionType}
+            onSelectType={handleSelectType}
+          />
+          <Button onClick={handleConfirmBooking}>Confirm Booking</Button>
+        </Stack>
       </Stack>
     </div>
   );
