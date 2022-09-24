@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import classes from "./CoachSchedule.module.css";
 import SessionPicker from "../Booking/SessionPicker";
 import Button from "../UI/Button";
 import SessionType from "../Booking/SessionType";
 import { Stack } from "@mui/system";
 import Swal from "sweetalert2";
-import NoPage from "./NoPage"
+import NoPage from "./NoPage";
 
 const sessionTypes = [
   { type: "1 on 1", duration: "30mins", price: "$40" },
@@ -22,7 +22,15 @@ function CoachSchedule(props) {
   const [sessionType, setSessionType] = useState("Private");
 
   if (location.state === null) {
-    return <NoPage/>;
+    return (
+      <>
+        <NoPage
+          text="Please select a coach from "
+          linkText="here"
+          to="/coaches"
+        />
+      </>
+    );
   }
 
   function handleSelectDate(newDate) {
@@ -53,18 +61,16 @@ function CoachSchedule(props) {
     <div className={classes.layout}>
       <Stack alignItems="center" justifyContent="center">
         <Button onClick={() => navigate(-1)}>Back</Button>
-        <h2>{location.state.key}</h2>
-        <div>
-          <SessionPicker
-            dateTime={selectedDate}
-            onSelectDate={handleSelectDate}
-          />
-          <h3>Select session type</h3>
-          <SessionType
-            sessionType={sessionType}
-            onSelectType={handleSelectType}
-          />
-        </div>
+        <h2>{location.state.coach.name}</h2>
+        <SessionPicker
+          dateTime={selectedDate}
+          onSelectDate={handleSelectDate}
+        />
+        <h3>Select session type</h3>
+        <SessionType
+          sessionType={sessionType}
+          onSelectType={handleSelectType}
+        />
         <Button onClick={handleConfirmBooking}>Confirm Booking</Button>
       </Stack>
     </div>
