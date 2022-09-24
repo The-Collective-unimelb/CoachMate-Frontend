@@ -1,9 +1,19 @@
 import classes from "./CoachProfile.module.css";
 import pfp from "../../assets/pfp-blue.jpg";
+import { Link } from "react-router-dom";
 
 function CoachProfile() {
   return (
     <div className={classes["vertical-flex"]}>
+      <div className={classes.topbar}>
+        <Link to="/coach-dashboard" className={classes["topbar-text"]}>
+          DASHBOARD
+        </Link>
+        <div>&nbsp; {'>'} &nbsp;</div>
+        <Link to="#" className={classes["topbar-text"]}>
+          PROFILE
+        </Link>
+      </div>
       <h1 className={classes["heading"]}>COACH PROFILE</h1>
       <div className={classes["horizontal-flex"]}>
         <div className={classes["profile-pic-column"]}>

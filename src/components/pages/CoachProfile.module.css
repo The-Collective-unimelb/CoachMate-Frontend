@@ -5,6 +5,20 @@
   align-items: center;
 }
 
+.topbar {
+  display: flex;
+  align-self: flex-start;
+  font-size: 15px;
+  padding-bottom: 40px;
+}
+
+.topbar-text {
+  color: dodgerblue;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding-bottom: 3px;
+}
+
 .heading {
   text-align: center;
   font-weight: 600;
@@ -32,7 +46,6 @@
   p {
     text-align: center;
   }
-
 }
 
 .profile-pic-column {

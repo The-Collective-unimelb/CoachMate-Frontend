@@ -1,10 +1,20 @@
 import classes from "./EditProfile.module.css";
 import pfp from "../../assets/pfp-blue.jpg";
 import Card from "../UI/Card";
+import { Link } from "react-router-dom";
 
 function EditProfile() {
   return (
     <div className={classes["vertical-flex"]}>
+      <div className={classes.topbar}>
+        <Link to="/coach-dashboard" className={classes["topbar-text"]}>
+          DASHBOARD
+        </Link>
+        <div>&nbsp; {">"} &nbsp;</div>
+        <Link to="#" className={classes["topbar-text"]}>
+          EDIT PROFILE
+        </Link>
+      </div>
       <h1 className={classes["heading"]}>EDIT PROFILE</h1>
       <div className={classes["horizontal-flex"]}>
         <div className={classes["profile-pic-column"]}>

@@ -3,6 +3,20 @@
   text-align: left;
 }
 
+.topbar {
+  display: flex;
+  align-self: flex-start;
+  font-size: 15px;
+  padding-bottom: 40px;
+}
+
+.topbar-text {
+  color: dodgerblue;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding-bottom: 3px;
+}
+
 .history-header {
   display: grid;
   width: 100%;
@@ -18,17 +32,17 @@
 }
 
 .history-row {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 15% 15% 20% 20% 15% 15%;
-    text-align: center;
-    border-style: solid;
-    height: 45px;
-    margin-bottom: 20px;
-    background-color: #f0f0f0;
-    font-weight: bold;
-    align-items: center;
-  }
+  display: grid;
+  width: 100%;
+  grid-template-columns: 15% 15% 20% 20% 15% 15%;
+  text-align: center;
+  border-style: solid;
+  height: 45px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  align-items: center;
+}
 
 @media (max-width: 1000px) {
   .history-header {
