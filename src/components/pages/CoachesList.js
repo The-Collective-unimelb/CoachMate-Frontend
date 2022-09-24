@@ -141,7 +141,7 @@ function CoachesList() {
               avail={coach.avail}
               location={coach.location}
               onClick={() => {
-                navigate("/schedule", { state: { key: coach.id } });
+                navigate("/schedule", { state: { coach: coach } });
               }}
             />
           );

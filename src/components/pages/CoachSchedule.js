@@ -66,12 +66,13 @@ function CoachSchedule(props) {
     <div className={classes.layout}>
       <Stack direction="row" spacing={10}>
         <Stack spacing={5}>
-          <Button onClick={() => navigate(-1)}>Back</Button>
+          {/* <Button onClick={() => navigate(-1)}>Back</Button> */}
 
           <img src={testPic} alt="profile pic" />
           <h2>{location.state.coach.name}</h2>
+          <h3>Venue</h3>
         </Stack>
-        <Stack alignItems="center" justifyContent="center" spacing={5}>
+        <Stack spacing={5}>
           <SessionPicker
             dateTime={selectedDate}
             onSelectDate={handleSelectDate}
@@ -80,9 +81,10 @@ function CoachSchedule(props) {
             sessionType={sessionType}
             onSelectType={handleSelectType}
           />
-          <Button onClick={handleConfirmBooking}>Confirm Booking</Button>
         </Stack>
       </Stack>
+      <Button onClick={handleConfirmBooking}>Confirm Booking</Button>
+
     </div>
   );
 }
