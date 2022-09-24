@@ -42,7 +42,7 @@ function SessionPicker(props) {
             {...param}
             error={hasError}
             helperText={hasError && "Invalid"}
-            sx={{ width: "500px", display: "block" }}
+            sx={{ width: "500px"}}
           />
         )}
       />
