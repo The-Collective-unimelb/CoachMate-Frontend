@@ -36,6 +36,9 @@ function CoachDashboard() {
           <Link to="/booking-success" className={classes.link}>
             BOOKING SUCCESS
           </Link>
+          <Link to="/coach-booking" className={classes.link}>
+            COACH BOOKING
+          </Link>
         </div>
       </div>
     </div>

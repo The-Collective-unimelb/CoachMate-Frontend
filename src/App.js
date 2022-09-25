@@ -31,6 +31,7 @@ function App() {
           <Route path="/schedule" element={<CoachSchedule />} />
           <Route path="/session-picker" element={<SessionPicker />} />
           <Route path="/athlete-booking" element={<AthleteBooking />} />
+          <Route path="/coach-booking" element={<CoachBooking />} />
           <Route path="/booking-success" element={<BookingSuccess />} />
           <Route path="/*" element={<NoPage />} />
         </Routes>
