@@ -13,6 +13,7 @@ import CoachSchedule from "./components/pages/CoachSchedule";
 import SessionPicker from "./components/Booking/SessionPicker";
 import AthleteBooking from "./components/Booking/AthleteBooking";
 import BookingSuccess from "./components/pages/BookingSuccess";
+import CoachBookings from "./components/Booking/CoachBookings"
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           <Route path="/schedule" element={<CoachSchedule />} />
           <Route path="/session-picker" element={<SessionPicker />} />
           <Route path="/athlete-booking" element={<AthleteBooking />} />
-          <Route path="/coach-booking" element={<CoachBooking />} />
+          <Route path="/coach-booking" element={<CoachBookings />} />
           <Route path="/booking-success" element={<BookingSuccess />} />
           <Route path="/*" element={<NoPage />} />
         </Routes>

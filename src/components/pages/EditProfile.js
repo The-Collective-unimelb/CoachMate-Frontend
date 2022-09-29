@@ -1,6 +1,5 @@
 import classes from "./EditProfile.module.css";
 import pfp from "../../assets/pfp-blue.jpg";
-import Card from "../UI/Card";
 import { Link } from "react-router-dom";
 
 function EditProfile() {
@@ -19,7 +18,11 @@ function EditProfile() {
       <div className={classes["horizontal-flex"]}>
         <div className={classes["profile-pic-column"]}>
           <h2 className={classes["coach-name"]}>NAME</h2>
-          <img src={pfp} className={classes["profile-pic"]}></img>
+          <img
+            src={pfp}
+            className={classes["profile-pic"]}
+            alt="profile pic"
+          ></img>
           <h3 className={classes["edit-pfp"]}>EDIT PROFILE PHOTO</h3>
         </div>
         <div className={classes["input-column"]}>
