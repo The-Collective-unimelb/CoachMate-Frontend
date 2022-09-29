@@ -15,6 +15,7 @@ import AthleteBooking from "./components/Booking/AthleteBooking";
 import BookingSuccess from "./components/pages/BookingSuccess";
 import CoachBookings from "./components/Booking/CoachBookings"
 import AboutUs from "./components/pages/AboutUs";
+import Contact from "./components/pages/Contact"
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/coach-booking" element={<CoachBookings />} />
           <Route path="/booking-success" element={<BookingSuccess />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<NoPage />} />
         </Routes>
       </div>
