@@ -5,12 +5,12 @@ function Footer() {
     return <div className={classes.footer}>
         <div className={classes.div1}>
             <a href='/' className={classes.h1}>HOME</a>
-            <a href='/' className={classes.h1}>ABOUT US</a>
-            <a href='/' className={classes.h1}>CONTACT</a>
+            <a href='/about-us' className={classes.h1}>ABOUT US</a>
+            <a href='/contact' className={classes.h1}>CONTACT</a>
         </div>
         <div className={classes.div2}>
             <div className={classes.div3}>
-                <a className={classes.h1}>&copy; 2022 COACHMATE</a>
+                <div className={classes.h1}>&copy; 2022 COACHMATE</div>
                 <div className={classes.h1}>&nbsp; | &nbsp;</div>
                 <a href='/' className={classes.h1}>TERMS &amp; CONDITIONS</a>
                 <div className={classes.h1}>&nbsp; | &nbsp;</div>

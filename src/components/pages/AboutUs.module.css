@@ -15,7 +15,7 @@
   object-fit: cover;
   object-position: 25% 65%;
   border: solid 4px;
-  max-width: 99.2%;
+  max-width: 99%;
 }
 
 .title {
@@ -36,7 +36,7 @@
   margin-right: 10vw;
   padding: 20px;
   font-size: 16px;
-  border: solid 4px;
+  border: solid 3px;
 }
 
 .details-title {
