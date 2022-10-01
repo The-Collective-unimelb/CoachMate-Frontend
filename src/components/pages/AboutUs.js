@@ -18,7 +18,7 @@ function AboutUs() {
         <br />
         <div>
         Our <b>vision</b> is to become the best global customer centric One Stop
-        Solution where coaches and their clients unite in can harmony.
+        Solution where coaches and athletes can unite in harmony.
         </div>
         <br />
         <div>

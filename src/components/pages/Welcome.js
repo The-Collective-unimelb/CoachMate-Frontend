@@ -33,6 +33,9 @@ function Welcome() {
             Seemlessly connects coaches with athletes hassle free. So you only
             have to worry about the important stuff - Training to be better
             everyday!
+            <br />
+            <br />
+            <b>ANYWHERE.ANYTIME.</b>
           </div>
         </div>
         <Card>
