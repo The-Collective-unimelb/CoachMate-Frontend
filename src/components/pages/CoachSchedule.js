@@ -83,7 +83,7 @@ function CoachSchedule(props) {
           />
         </Stack>
       </Stack>
-      <Button onClick={handleConfirmBooking}>Confirm Booking</Button>
+      <Button onClick={handleConfirmBooking}>CONFIRM BOOKING</Button>
 
     </div>
   );

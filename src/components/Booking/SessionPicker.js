@@ -5,6 +5,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import dayjs from "dayjs";
 import { MobileDateTimePicker } from "@mui/x-date-pickers";
+import { width } from "@mui/system";
 
 const minTime = dayjs().hour(8);
 const maxTime = dayjs().hour(18);
@@ -42,7 +43,10 @@ function SessionPicker(props) {
             {...param}
             error={hasError}
             helperText={hasError && "Invalid"}
-            sx={{ width: "500px"}}
+            sx={{ 
+              width: "500px",
+              borderImageWidth: "0px"
+            }}
           />
         )}
       />

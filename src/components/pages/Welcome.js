@@ -28,11 +28,11 @@ function Welcome() {
       </div>
       <div className={classes["horizontal-content-flex"]}>
         <div className={classes["welcome-quote"]}>
-          LOREM IPSUM DOLOR SIT AMET
+          LESS TIME BOOKING, MORE TIME TRAINING
           <div className={classes["welcome-quote-small"]}>
-            Lorem ipsum dolor sit amet. Vel placeat autem et debitis numquam 33
-            delectus quod et totam voluptate. Quo blanditiis unde ut dolor
-            expedita est quidem vitae.
+            Seemlessly connects coaches with athletes hassle free. So you only
+            have to worry about the important stuff - Training to be better
+            everyday!
           </div>
         </div>
         <Card>
@@ -43,8 +43,8 @@ function Welcome() {
           ></img>
           <div className={classes["card-title"]}>NETBALL</div>
           <div className={classes["card-quote"]}>
-            Lorem ipsum dolor sit amet. Vel placeat autem et debitis numquam 33
-            delectus quod
+            Netball is a ball sport played by two teams of seven players,
+            usually on an indoor court.
           </div>
           <Button variant="contained">SEE MORE</Button>
         </Card>
