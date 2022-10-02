@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+
 import NoPage from "./components/pages/NoPage";
 import Welcome from "./components/pages/Welcome";
 import Footer from "./components/Layout/Footer.js";
@@ -16,6 +17,7 @@ import BookingSuccess from "./components/pages/BookingSuccess";
 import CoachBookings from "./components/Booking/CoachBookings"
 import AboutUs from "./components/pages/AboutUs";
 import Contact from "./components/pages/Contact"
+import TestDB from "./components/pages/TestDB";
 
 function App() {
   return (
@@ -38,6 +40,7 @@ function App() {
           <Route path="/booking-success" element={<BookingSuccess />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/test-db" element={<TestDB />} />
           <Route path="/*" element={<NoPage />} />
         </Routes>
       </div>

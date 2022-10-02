@@ -39,6 +39,9 @@ function CoachDashboard() {
           <Link to="/coach-booking" className={classes.link}>
             COACH BOOKING
           </Link>
+          <Link to="/test-db" className={classes.link}>
+            **DATABASE TESTING**
+          </Link>
         </div>
       </div>
     </div>
