@@ -1,4 +1,7 @@
 # coachmate-frontend
+
+# This repo is deprecated, it is combined with server-side repo
+
 ## Dependencies
 
 React
